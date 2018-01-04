@@ -1,0 +1,41 @@
+HVGA 	320*480
+
+WVGA	480*800
+
+FWVGA	480*854
+
+ ● adb.exe		android debug bridge android 调试桥。
+
+ ● adb devices 	列出所有的连接的设备
+ ● reset adb		重启adb的调试桥
+ ● adb kill-server	杀死adb调试桥
+ ● adb start-server	启动adb调试桥
+ ● netstat -ano	查看端口号
+
+ ● adb install xxx.apk		安装一个应用程序
+ ● adb unintall <包名>
+
+ ● adb -s 设备名称
+
+ ● assets  资产目录 存放一个文件的  这些文件会被打包到应用程序的apk(安装包)
+ ● bin	编译后的文件目录
+ ● gen	自动生成的文件目录
+
+ ● 常见命令操作
+ ● adb devices	列出所有的设备
+ ● adb shell 挂载到Linux的空间
+
+ ● adb install xxx.apk 如果有多个设备，我们可以指定设备  adb install -semulator-5554 D:/xxx.apk
+
+ ● emulator -avd advname 启动模拟器   例如： emulator -avd 2.2 (2.2 为我们创建设备的名称)
+
+ ● mkmdcard  20m d:/sdcard.img 创建sdcard 
+
+ ● adb pull <remote> <local>
+
+ ● adb push <local> <remote>
+
+ ● android create avd -name android2.2 -target 8 创建模拟器
+
+ ● ctrl + F11 横竖屏的切换
+
