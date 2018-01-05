@@ -1,0 +1,15 @@
+定义一个应用程序名的字符串，有两种引用方式：
+1，在代码中，通过R.string.hello_world可以获得该字符串的引用。
+2，在XML中，通过@string/hello_world可以获得该字符串的引用。
+
+其中，string部分是可以替换成其他的，譬如图片资源就替换成 drawable ，如果是引用图标就替换成 mipmap,如果是布局文件就替换成 layout 。
+
+eg: (xml文件)
+<application
+	android:allowBackup="true"
+	android:icon="@mipmap/ic_launcher"
+	android:label="@string/app_name"
+	android:supportsRtl="true"
+	android:theme="@style/AppTheme">
+</application>
+
