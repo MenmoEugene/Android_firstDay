@@ -1,0 +1,62 @@
+安卓操作系统的介绍
+安迪鲁宾
+logo 设计师去厕所得来的灵感
+
+安卓系统构成
+【1】Linux
+【2】函数库层，由C或者C++编写
+【3】Application frameWork 应用的框架层
+【4】最上层，应用层
+
+jvm和dvm 介绍、区别
+【1】dvm把所有的.class 文件变成一个dex文件
+【2】基于的架构不同
+【3】为什么谷歌自己研发dvm 由于版权的原因
+
+Android 版本对应的api级别
+2.3------10
+3.0------11
+4.0------14
+4.1.2----16
+
+Android 常见分辨率
+320*480
+480*800
+1080*720
+
+sdkManager介绍
+dx.bat  把所有的.class 文件变成一个 dex文件。
+aapt   Android应用打包工具
+adb Android调试桥
+doc：目录存文档
+source：源码
+platform：开发的平台
+intel ：生产CPU 主要针对PC机或者笔记本
+arm：生产标准
+
+Android工程目录结构
+src：存源代码
+gen：R文件
+bin：apk文件
+assets：资产目录
+libs：额外的jar包
+drawable：存的是Android图片资源
+layout：存的是Android布局VC
+values：字符串
+Android的清单文件：Android中的四大组件(Acitivity broadCastReceiver service ContentProvider)都需要在清单文件里面配置。
+
+Android打包过程
+
+adb指令练习
+【1】kill-server  杀死adb服务
+【2】start-server  开启服务
+【3】adb install aa.apk 快速安装一个apk
+【4】adb uninstall + (应用的包名) 快速卸载一个Android应用
+【5】adb shell 进入到手机终端
+【6】adb pull test.txt 把一个文件从终端拉出来
+【7】adb push test.txt  /mnt/scard 把一个文件从电脑推到手机
+
+电话拨号器案例
+【1】画UI
+【2】根据UI写对应的业务逻辑
+【3】测试 
