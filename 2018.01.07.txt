@@ -1,0 +1,11 @@
+在活动中使用Toast
+Toast是Android系统提供的一种友好的提醒方式，在程序中可以使用它将一些短小的信息通知给用户，这些信息会在一段时间后自动消失，并且不会占用任何屏幕空间。
+eg：
+	Button button1 = (Button) findViewById(R.id.Button_1);
+	button1.setOnClickListener(new View.OnClickListener()){
+	       @Override
+	       public void onClick(View v){
+		Toast.makeText(FirstAcitivity.this, 
+		"you clicked Button 1", Toast.LENGTH_SHORT).show( );
+	       }
+	});
