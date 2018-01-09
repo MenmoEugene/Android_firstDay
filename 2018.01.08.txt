@@ -1,0 +1,23 @@
+Intent 是 Android 程序中各组件之间进行交互的一种重要方式，它不仅可以致命当前组件想要执行的动作，还可以在不同组件之间传递数据。Intent一般可被用于启动活动、启动服务以及发送广播等场景。
+
+Intent 大致可以分为两种：显式 Intent 和隐式 Intent。
+
+显式：Intent 有多个构造函数的重载，其中一个是Intent(Context packageContext，Class<?>cls)。这个构造函数接收两个参数，第一个参数Context要求提供一个启动活动的上下文，第二个参数class 则是指定想要启动的目标活动，通过这个构造函数就可以构建出Intent 发"意图"。Activity 类中提供了一个startActivity() 方法，这个方法是专门用于启动活动的，它接收一个 Intent 参数，将构造好的 Intent 传入startActivity () 方法就可以启动活动目标了。
+
+  button.setOnClickListener(new View.OnClickListener()){
+  @Override
+  public void onClick(View v){
+        Intent intent = new Intent(FirstActivity.this,SecondActivity.class);
+        startActivity(intent);
+      }
+  }
+
+隐式 Intent 相比于显式要含蓄了许多，它并不明确指出我们想要启动哪一个活动，而是指定了一系列更为抽象的 action 和 category 的信息，然后交由系统去分析这个 Intent，并帮我们找出合适的活动去启动。
+
+
+<activity android:name=".SecondActivity">
+  <intent - filter>
+      <action android:name="com.example.activitytest.ACTION_START" />
+      <category android:name="android.intent.category.DEAFULT" />
+  </intent - filter>
+</activity>
